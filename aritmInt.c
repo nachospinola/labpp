@@ -1,7 +1,7 @@
 /*
 Arquivo: aritmInt.c
 Autor: Luiz Felipe Spinola Silva
-Matrícula:
+Matrícula: 12121EBI001
 Criado em: 03/11/2022
 */
 #include <stdio.h>
