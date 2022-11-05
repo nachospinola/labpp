@@ -1,4 +1,5 @@
 /*
+Arquivo: somaDivisores.c
 Nome: Luiz Felipe Spinola Silva
 Matricula: 12121EBI001
 Criado em 04/11/2022
