@@ -1,5 +1,5 @@
 /*
-Arquivo: aritmInt.c
+Arquivo: fatorial.c
 Autor: Luiz Felipe Spinola Silva
 Matrícula: 12121EBI001
 Criado em: 03/11/2022
