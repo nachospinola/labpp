@@ -2,17 +2,19 @@
 Arquivo: fatorial.c
 Autor: Luiz Felipe Spinola Silva
 Matrícula: 12121EBI001
-Criado em: 03/11/2022
+Criado em: 04/11/2022
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <inttypes.h>
 int main(void){
-    int a, c=1;
-    scanf("%d", &a);
+    int64_t c=1;
+    int64_t a;
+    scanf("%lld", &a);
     while(a>1){
         c=c*a;
         a--;
     }
-    printf("%d\n", c);
+    printf("%lld\n", c);
     return 0;
 }
