@@ -1,5 +1,5 @@
 /*
-Arquivo: cos.c
+Arquivo: cosTaylor.c
 Autor: Luiz Felipe Spinola Silva
 Matrícula: 12121EBI001
 Criado em: 04/11/2022
