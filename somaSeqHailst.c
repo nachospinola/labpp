@@ -6,9 +6,8 @@ Criado em: 24/11/2022
 */
 #include <stdio.h>
 int main(void){
-    int xn;
-    int i=0;
-    int u=5;
+    int u=5, i=0, xn;
+    printf("Digite um numero:\n");
     scanf("%d", &xn);
     if(xn==1){
         u++;
