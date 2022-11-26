@@ -5,66 +5,56 @@ Matrícula: 12121EBI001
 Criado em: 24/11/2022
 */
 #include <stdio.h>
-int div(int a);
-int happy(int a);
+#include <math.h>
+#include <stdbool.h>
+bool primo(int x);
+bool happy(int y);
 int main(void){
-    int a;
-    scanf("%d", &a);
-    int j=a;
-    while(j>=0){
-        if(div(j)==2){
-            if(happy(j)==1){
-                printf("%d", j);
-                return 0;
+    int x, p, h;
+    scanf("%d", &x);
+    while(x!=0){
+        p=0;
+        h=0;
+        p=primo(x);
+        h=happy(x);
+        if(p&&h){
+            printf("%d", x);
+            x=0;
+        }
+        else{
+            x=x-1;
+            if(x==0){
+                printf("%d***", x);
             }
         }
-        j++;
     }
-    printf("%s", "0***");
     return 0;
 }
-int div(int a){
-    int j=1, d=0;
-    while(j<=a){
-        if(a%j==0){
-            d++;
-        }
-        j++;
-        if(d>2){
-            return d;
+bool primo(int x){
+    if(x==1){
+        return false;
+    }
+    for(int i=2;i<x; i++){
+        if((x%1)==0){
+            return false;
         }
     }
-    return d;
+    return true;
 }
-int happy(int a){
-    int j=1;
-    while(j<a){
-        j=j*10;
-        if(j>a){
-            j=j/10;
-            break;
-        }
-    }
-    int n, sum=0; 
-    while(j!=0){
-        n=a/j;
-        a=a%j;
-        sum=sum+(n*n);
-        j=j/10;
-        if(j%1==1){
-            j=0;
-        }
+bool happy(int y){
+    int d, sum=0;
+    while(y>0){
+        d=y%10;
+        sum=sum+pow(d,2);
+        y=y/10;
     }
     if(sum==4){
-        return 3;
+        return false;
     }
-    if(sum==1){
-        return 1;
+    else if(sum!=1){
+        return happy(sum);
     }
     else{
-        if(happy(sum)==1){
-            return 1;
-        }
+        return true;
     }
-    return 0;
 }
