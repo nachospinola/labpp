@@ -6,27 +6,24 @@ Criado em: 24/11/2022
 */
 #include <stdio.h>
 int main(void){
-    int u=5, i=0, xn;
+    int xn;
     printf("Digite um numero:\n");
     scanf("%d", &xn);
+    int i=xn;
     if(xn==1){
-        u++;
+        printf("%d", &xn);
+        return 0;
     }
     while(xn!=1){
         if(xn%2==0){
-            i=i+(xn/2);
-            xn=xn/2;
+            xn=(xn/2);
+            i=i+xn;
         }
-        if(xn%2!=0){
-            i=i+((3*xn)+1);
+        else{
             xn=(3*xn)+1;
+            i=i+xn;
         }
     }
-    if(u==5){
-        printf("%d", i+1);
-    }
-    if(u==6){
-        printf("%d", xn);
-    }
+    printf("%d", i);
     return 0;
 }
