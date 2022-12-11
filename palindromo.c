@@ -4,22 +4,38 @@ Nome: Luiz Felipe Spinola Silva
 Matricula: 12121EBI001
 Criado em 10/12/2022
 */
-#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #define N 1024
 
 void getstr(char * str, long long int nchar);
 void upper(char * str);
-void rev(char * str, long long int nchar);
-void pal(char * str, char * str2);
+void copy(char * str, char * str2, long long int nchar);
+void inverser(char * str, char * str2, long long int nchar);
 
 int main(void){
     char txt[N] = {'x','x','x','x','x'};
-    char txt2[N];
+    char txtf[N];
+    long long int g=0;
+    long long int ecart=0;
     printf("Entre com um texto: ");
     getstr(txt, N);
     upper(txt);
-    strcpy(txt2, txt);
+    copy(txt,txtf,N);
+    char copie[strlen(txtf)];
+    inverser(txtf, copie, N);
+    for(g;g<strlen(copie);g++){
+        if(txtf[g] != copie[g]){
+            ecart++;
+        }
+    }
+    if(ecart==0){
+        printf("Palindrono: Verdadeiro");
+    }
+    else{
+        printf("Palindrono: Falso");
+    }
     return 0;
 }
 
@@ -42,9 +58,25 @@ void upper(char * str) {
     }
 }
 
-void rev(char * str, long long int nchar){
-    long long int i = nchar - 1;
-    for(i; i>=0; i--){
-        printf("%c", str[i]);
+void copy(char * str, char * str2, long long int nchar){
+    long long int i=0;
+    long long int j=0;
+    for(i;i<nchar;i++){
+        if(str[i] != (' ') && str[i] != ('.') && 
+        str[i] != (',') && str[i] != ('-') && str[i] != (':') &&
+         str[i] != ('"')){
+            str2[j++]=str[i];
+         }
+    }
+    printf("%s", str2);
+}
+
+void inverser(char * str, char * str2, long long int nchar){
+    long long int y=strlen(str);
+    y--;
+    long long int x = 0;
+    for(y; y>=0 ;y--){
+        str2[x]=str[y];
+        x++;
     }
 }
