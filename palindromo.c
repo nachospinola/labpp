@@ -1,22 +1,25 @@
 /*
-Arquivo: reverteString.c
+Arquivo: palindromo.c
 Nome: Luiz Felipe Spinola Silva
 Matricula: 12121EBI001
 Criado em 10/12/2022
 */
 #include <stdio.h>
+#include <string.h>
 #define N 1024
 
 void getstr(char * str, long long int nchar);
 void upper(char * str);
 void rev(char * str, long long int nchar);
+void pal(char * str, char * str2);
 
 int main(void){
     char txt[N] = {'x','x','x','x','x'};
+    char txt2[N];
     printf("Entre com um texto: ");
     getstr(txt, N);
     upper(txt);
-    rev(txt, N);
+    strcpy(txt2, txt);
     return 0;
 }
 
