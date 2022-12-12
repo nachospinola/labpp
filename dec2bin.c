@@ -5,33 +5,21 @@ Matricula: 12121EBI001
 Criado em 10/12/2022
 */
 #include <stdio.h>
-#define N 1024
 
-void converte(unsigned x, unsigned a[N]);
-void scan(unsigned a[N]);
+void con(long long int x);
 
 int main(void){
-    unsigned num;
-    unsigned vet[N];
+    long long int num;
     printf("Digite abaixo o numero decimal:\n");
     scanf("%llu", &num);
-    converte(num,vet);
-    scan(vet);
+    con(num);
     
     return 0;
 }
 
-void converte(unsigned x, unsigned a[]){
-    unsigned i;
-    unsigned j;
-    for(i=x, j=0;(i/2)==0; (i/2), j++){
-        a[j]=(i%2);
-    }
-}
-
-void scan(unsigned a[N]){
-    unsigned i=N-1;
-    for(i; i>=0; i--){
-        printf("%llu", a[i]);
+void con(long long int x){
+    if(x !=0){
+        con(x/2);
+        printf("%d", x%2);
     }
 }
