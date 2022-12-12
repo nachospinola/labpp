@@ -8,6 +8,7 @@ Criado em: 24/11/2022
 int main(void){
     int a;
     int b;
+    printf("Digite os valores comparativos: ");
     scanf("%d", &a);
     scanf("%d", &b);
     for (int i=a;i<b;i++){

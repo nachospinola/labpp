@@ -10,6 +10,7 @@ Criado em: 04/11/2022
 int main(void){
     int64_t c=1;
     int64_t a;
+    printf("Digite o valor que queira saber o fatorial: ");
     scanf("%lld", &a);
     while(a>1){
         c=c*a;

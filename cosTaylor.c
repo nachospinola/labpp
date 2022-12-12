@@ -18,6 +18,7 @@ int fat(int i);
 int main(void){
     int n, i;
     double x, cost=0;
+    printf("Digite os valores: ");
     scanf("%d", &n);
     scanf("%lf", &x);
     x=x*M_PI;

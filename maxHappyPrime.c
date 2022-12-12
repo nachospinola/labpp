@@ -11,6 +11,7 @@ bool primo(int x);
 bool happy(int y);
 int main(void){
     int x, p, h;
+    printf("Digite o numero: ");
     scanf("%d", &x);
     while(x!=0){
         p=0;
