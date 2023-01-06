@@ -22,7 +22,5 @@ double S(int n){
         return 4.0;
     }
     return (S(n-1)+(4*((pow(-1,n))/((2*n)+1))));
-    //return (S(n-1)+(4.0*(((n%2==0)? 1.0 : -1.0)/((2*n)+1))));
     
 }
-// iperetta@ufu.br
