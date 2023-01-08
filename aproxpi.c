@@ -12,9 +12,8 @@ int main(void){
     int n;
     printf("Digite um numero:\n");
     scanf("%d", &n);
-    printf("******* %lf\n", 5.6);
     x = S(n);
-    printf("******* %lf\n", x);
+    printf("%lf\n", x);
     return 0;
 }
 double S(int n){

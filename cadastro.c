@@ -36,14 +36,21 @@ int main(void){
     Data data;
     Altura altura;
     Peso peso;
-    printf("Digite seu nome, data de nascimento e.g DD/MM/YY, altura e peso:\n");
-    scanf("%s %s %d/%d/%d %d.%d %f", &nome.nome, &nome.sobrenome, &data.dia, &data.mes,
-    &data.ano, &altura.metro, &altura.cm, &peso.kg );
-    altura.cm = cm(altura.cm);
-    printf("%s %s; ",nome.nome, nome.sobrenome);
-    printf("%02d%s%04d; ", data.dia, strmes[data.mes], data.ano);
-    printf("Altura %dm%d; ", altura.metro, altura.cm);
-    printf("%0.1fkg", peso.kg);
+    int c;
+    int i=0;
+    printf("Digite: a quantidade de nomes a serem cadastrados:\n");
+    scanf("%d",&c);
+    printf("Digite na quantidade a ser cadastrada: nomes, datas de nascimento e.g DD/MM/YY, alturas e pesos:\n");
+    while(i!=c){
+        scanf("%s %s %d/%d/%d %d.%d %f", &nome.nome, &nome.sobrenome, &data.dia, &data.mes,
+        &data.ano, &altura.metro, &altura.cm, &peso.kg );
+        altura.cm = cm(altura.cm);
+        printf("%s %s; ",nome.nome, nome.sobrenome);
+        printf("%02d%s%04d; ", data.dia, strmes[data.mes], data.ano);
+        printf("Altura %dm%d; ", altura.metro, altura.cm);
+        printf("%0.1fkg\n", peso.kg);
+        i++;
+    }
     return 0;
 }
 int cm(int x) {
